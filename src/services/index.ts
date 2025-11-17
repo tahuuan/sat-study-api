@@ -1,0 +1,7 @@
+export * from './adapters/customer.interface'
+export * from './adapters/product.interface'
+export * from './adapters/warehouse.interface'
+export * from './adapters/supplier.interface'
+export * from './adapters/order.interface'
+export * from './adapters/delivery-partner.interface'
+export * from './adapters/employee.interface'

@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    /* For decorators/metadata */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    /* Base Options */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    // "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": false,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false, // Prevents accessing properties using dot notation when the type has an index signature
+
+    /* Modules */
+    "module": "NodeNext",
+    "outDir": "dist",
+
+    /* Declaration For Building Library */
+    "declaration": true,
+    "sourceMap": true,
+    // "composite": true,
+    // "declarationMap": true,
+
+    "moduleResolution": "NodeNext",
+    "strictNullChecks": true
+  },
+  "lib": ["es2022"],
+  "include": ["src/**/*", "eslint.config.mjs"],
+  "exclude": ["node_modules", "dist"],
+
+  // Extend Strictest and Recommended Configs
+  // "extends": [
+  //   "@tsconfig/strictest/tsconfig.json",
+  //   "@tsconfig/recommended/tsconfig.json"
+  // ],
+
+  "paths": {
+    "@environments": ["src/environments"],
+    "@enums": ["src/config/enums"],
+    "@enums/*": ["src/config/enums/*"],
+  }
+}

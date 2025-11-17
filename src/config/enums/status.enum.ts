@@ -1,0 +1,6 @@
+export enum Status {
+  PROCESSING = 'PROCESSING',
+  SHIPPING = 'SHIPPING',
+  SUCCESS = 'SUCCESS',
+  CANCELLED = 'CANCELLED',
+}

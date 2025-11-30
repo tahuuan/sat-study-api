@@ -14,29 +14,9 @@ services:
     networks:
       - db_network
 
-  neo4j:
-    image: neo4j:latest
-    ports:
-      - "7474:7474"  # HTTP
-      - "7687:7687"  # Bolt
-    environment:
-      NEO4J_AUTH: "neo4j/Admin@123"  # format: username/password
-      NEO4J_dbms_memory_pagecache_size: 1G
-      NEO4J_dbms_memory_heap_initial__size: 1G
-      NEO4J_dbms_memory_heap_max__size: 1G
-    volumes:
-      - neo4j_data:/data
-      - neo4j_logs:/logs
-      - neo4j_conf:/conf
-    networks:
-      - db_network
-
 networks:
   db_network:
     driver: bridge
 
 volumes:
   mssql_data:
-  neo4j_data:
-  neo4j_logs:
-  neo4j_conf:

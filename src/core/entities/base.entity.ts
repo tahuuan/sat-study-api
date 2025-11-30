@@ -1,9 +1,11 @@
-export class BaseEntityWithoutId {
+export class EntityWithId {
+  id: string
+}
+
+export class BaseEntity extends EntityWithId {
   createdAt?: Date
 
   updatedAt?: Date
-}
 
-export class BaseEntity extends BaseEntityWithoutId {
-  id: string
+  deletedAt?: Date
 }
